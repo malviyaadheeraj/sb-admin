@@ -4770,7 +4770,15 @@ fieldset:disabled .btn {
   --bs-pagination-disabled-border-color: #dee2e6;
   display: flex;
   padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
+}
+
+.datatable-pagination-list-item.datatable-active
+  .datatable-pagination-list-item-link {
+  font-weight: bold;
+  color: #fff;
+  background-color: #0c63e4;
 }
 
 .page-link,
@@ -11545,6 +11553,9 @@ body {
 
 .datatable-bottom {
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .datatable-top > nav:first-child,
@@ -11673,13 +11684,6 @@ body {
 
 .datatables-empty {
   text-align: center;
-}
-
-.datatable-top::after,
-.datatable-bottom::after {
-  clear: both;
-  content: " ";
-  display: table;
 }
 
 .datatable-pagination li.datatable-hidden {
